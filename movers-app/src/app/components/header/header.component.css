@@ -1,0 +1,37 @@
+/* Styles for the header toolbar */
+.header-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #430140; /* Custom purple background */
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: white!important; /* White text for the logo */
+}
+
+/* Ad banner styles */
+.ad-banner {
+  background-color: #ffcc00 !important; /* Yellow background for the ad */
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+  color: #000;  /* Black text */
+  font-weight: bold;
+}
+
+/* Button styles */
+header mat-toolbar button {
+  color: white !important;  /* Make the button text white */
+}
+
+header mat-toolbar button:hover {
+  background-color: rgba(255, 255, 255, 0.1);  /* Optional: Add hover effect */
+}
+
+header mat-toolbar button:focus {
+  outline: none;  /* Optional: Remove focus outline */
+}

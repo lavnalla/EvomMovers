@@ -1,0 +1,70 @@
+.hero-container {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f8f8f8; /* Light background for the hero section */
+}
+
+.hero-title {
+  font-size: 3rem;
+  color: #6a1b9a; /* Deep purple color */
+  margin-bottom: 10px;
+}
+
+.hero-description {
+  font-size: 1.5rem;
+  color: #333; /* Dark grey text for clarity */
+}
+
+.hero-sub-description {
+  font-size: 1.2rem;
+  color: #777; /* Lighter grey for the sub-description */
+  margin-bottom: 30px;
+}
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.service-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-title {
+  font-size: 1.5rem;
+  color: #6a1b9a; /* Deep purple for service titles */
+  margin-bottom: 10px;
+}
+
+.service-description {
+  font-size: 1rem;
+  color: #555; /* Lighter grey for descriptions */
+}
+
+.quote-btn {
+  background-color: #6a1b9a;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.quote-btn:hover {
+  background-color: #4a148c; /* Darker purple for hover effect */
+}

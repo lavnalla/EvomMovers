@@ -1,0 +1,36 @@
+/* Include a Material theme (e.g., Indigo/Pink) */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+/* Optionally, if you want to customize your theme, you can add your own styles here */
+.mat-toolbar.custom-purple-toolbar {
+  background-color: #430140 !important; /* Deep purple */
+  color: white !important;
+}
+
+.custom-purple-toolbar {
+  background-color: #6a1b9a !important;
+  color: white;
+  padding: 0; /* optional: remove extra space */
+}
+
+.nav-buttons {
+  display: flex;
+  width: 100%;              /* Make nav-buttons fill the toolbar */
+  color: white;          /* Text color for buttons */
+}
+
+.nav-buttons button {
+  flex: 1;                  /* Each button takes equal space */
+  color: white !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.2); /* optional separator */
+  border-radius: 0;         /* remove button rounding */
+  justify-content: center; /* center text inside buttons */
+}
+
+.mat-button {
+  color: white !important;  /* Force white color on all buttons */
+}
+
+.mat-button-wrapper {
+  color: white !important;  /* Make sure the text in buttons is white */
+}
