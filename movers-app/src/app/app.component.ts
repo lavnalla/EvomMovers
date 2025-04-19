@@ -17,7 +17,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeaderComponent, HeroComponent, ServicesComponent, TestimonialsComponent, FooterComponent,
+  imports: [HeaderComponent, HeroComponent, TestimonialsComponent, FooterComponent,
     CommonModule,
     MatCardModule,      // Angular Material Card module
     MatToolbarModule,   // Angular Material Toolbar module
