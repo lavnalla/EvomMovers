@@ -10,6 +10,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 
 
@@ -17,8 +19,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeaderComponent, HeroComponent, TestimonialsComponent, FooterComponent,
-    CommonModule,
+  imports: [HeaderComponent, HeroComponent, TestimonialsComponent, FooterComponent, ReactiveFormsModule,     CommonModule,
     MatCardModule,      // Angular Material Card module
     MatToolbarModule,   // Angular Material Toolbar module
     MatButtonModule,    // Angular Material Button module
