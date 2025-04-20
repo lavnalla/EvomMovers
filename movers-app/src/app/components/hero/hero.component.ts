@@ -13,6 +13,7 @@ export class HeroComponent {
   constructor(private dialog: MatDialog) {}
 
   openQuoteDialog(): void {
+
     this.dialog.open(QuoteFormComponent, {
       width: '400px',
     });

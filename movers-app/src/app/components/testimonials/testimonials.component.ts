@@ -10,8 +10,8 @@ import { MatCardModule } from '@angular/material/card';  // Import MatCardModule
 })
 export class TestimonialsComponent {
   testimonials = [
-    { name: 'John Doe', feedback: 'Great service!' },
-    { name: 'Jane Smith', feedback: 'Very professional.' },
+    { name: 'Lav Nalla', feedback: 'Great service!' },
+    { name: 'Eric Ogundipe', feedback: 'Very professional.' },
     { name: 'Alice Johnson', feedback: 'Highly recommend them.' }
   ];
 }
