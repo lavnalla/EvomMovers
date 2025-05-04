@@ -1,0 +1,70 @@
+<div class="quote-form">
+  <h2 class="form-title">Book Now!</h2>
+
+  <form (ngSubmit)="onSubmit()" #quoteForm="ngForm">
+    <div class="form-row">
+      <input
+        type="text"
+        name="fromAddress"
+        placeholder="Moving From Address"
+        [(ngModel)]="formData.fromAddress"
+        required
+      />
+      <input
+        type="text"
+        name="toAddress"
+        placeholder="Moving To Address"
+        [(ngModel)]="formData.toAddress"
+        required
+      />
+    </div>
+
+    <input
+      type="text"
+      name="fullName"
+      placeholder="Full Name"
+      [(ngModel)]="formData.fullName"
+      required
+    />
+
+    <div class="form-row">
+      <input
+        type="tel"
+        name="contactNo"
+        placeholder="Contact Number"
+        [(ngModel)]="formData.contactNo"
+        required
+      />
+      <input
+        type="email"
+        name="email"
+        placeholder="Email Address"
+        [(ngModel)]="formData.email"
+        required
+      />
+    </div>
+
+    <div class="form-row">
+      <input
+        type="date"
+        name="movingDate"
+        [(ngModel)]="formData.movingDate"
+        required
+      />
+      <select
+        name="typeOfMove"
+        [(ngModel)]="formData.typeOfMove"
+        required
+      >
+        <option value="" disabled selected>Select Move Type</option>
+        <option *ngFor="let type of moveTypes" [value]="type">
+          {{ type }}
+        </option>
+      </select>
+    </div>
+
+    <button type="submit" [disabled]="!quoteForm.valid">
+      Get A Quote
+    </button>
+  </form>
+</div>

@@ -1,0 +1,8 @@
+<div class="testimonials-container">
+  <mat-card *ngFor="let t of testimonials" class="testimonial-card">
+    <div class="testimonial-text">
+      <p class="testimonial-quote">"{{ t.feedback }}"</p>
+      <p class="testimonial-name">— {{ t.name }}</p>
+    </div>
+  </mat-card>
+</div>

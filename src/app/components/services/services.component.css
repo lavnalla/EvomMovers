@@ -1,0 +1,35 @@
+.services-wrapper {
+  padding: 40px 20px;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+  }
+
+  .service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+    .service-card {
+      width: 300px;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      mat-card-title {
+        font-weight: 600;
+        font-size: 1.3rem;
+        margin-top: 10px;
+      }
+
+      p {
+        font-size: 0.95rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+/* Ad banner */
+.ad-banner {
+  background-color: #d32f2f; /* Bright Red */
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Toolbar/Header */
+.custom-header {
+  background-color: #6ea1ee; /* Deep Blue */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: white;
+}
+
+/* Navigation buttons */
+.nav-buttons {
+  display: flex;
+  width: 100%;
+}
+
+.nav-buttons button {
+  flex: 1;
+  color: white !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0;
+  justify-content: center;
+}
+
+.nav-buttons button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
