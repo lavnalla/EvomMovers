@@ -1,0 +1,130 @@
+/* Fix the header to the top */
+app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* stay above everything */
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: auto;
+}
+
+/* Push the rest of the content down to make space for the fixed header */
+.nav {
+  margin-top: 120px; /* adjust to height of your header */
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    z-index: 1;
+    position: relative;
+  }
+  .nav {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    margin-top: 180px; /* increase to fit header and all links */
+    padding: 10px 5px;
+    font-size: 1rem;
+    background: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    z-index: 10;
+  }
+  .nav a {
+    width: 100%;
+    text-align: left;
+    padding: 16px 10px;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    margin: 0;
+  }
+  .cdk-overlay-pane.custom-dialog-panel {
+    width: 95vw !important;
+    max-width: 95vw !important;
+    height: 350px !important;
+    top: 80px !important;
+    left: 2.5vw !important;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    padding: 0;
+  }
+}
+
+/* Add scrollbars to all major Angular components */
+.hero,
+.overlay,
+.section,
+.services,
+.card,
+.nav,
+.cdk-overlay-pane.custom-dialog-panel {
+  overflow-y: auto !important;
+  scrollbar-width: thin;
+  scrollbar-color: #e30613 #f9f9f9;
+}
+
+/* For Webkit browsers */
+.hero::-webkit-scrollbar,
+.overlay::-webkit-scrollbar,
+.section::-webkit-scrollbar,
+.services::-webkit-scrollbar,
+.card::-webkit-scrollbar,
+.nav::-webkit-scrollbar,
+.cdk-overlay-pane.custom-dialog-panel::-webkit-scrollbar {
+  width: 8px;
+  background: #f9f9f9;
+}
+.hero::-webkit-scrollbar-thumb,
+.overlay::-webkit-scrollbar-thumb,
+.section::-webkit-scrollbar-thumb,
+.services::-webkit-scrollbar-thumb,
+.card::-webkit-scrollbar-thumb,
+.nav::-webkit-scrollbar-thumb,
+.cdk-overlay-pane.custom-dialog-panel::-webkit-scrollbar-thumb {
+  background: #e30613;
+  border-radius: 4px;
+}
+
+/* WhatsApp chat link styles */
+.whatsapp-chat-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #25d366;
+  color: #fff !important;
+  font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  padding: 10px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(37, 211, 102, 0.15);
+  transition: background 0.2s, box-shadow 0.2s;
+  margin: 18px auto 0 auto;
+  letter-spacing: 0.5px;
+}
+.whatsapp-chat-link:hover {
+  background: #1ebe5d;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.25);
+  color: #fff;
+}
+.whatsapp-chat-link .wa-icon {
+  font-size: 1.5rem;
+  vertical-align: middle;
+}
+@media (max-width: 600px) {
+  .whatsapp-chat-link {
+    width: 90vw;
+    font-size: 1rem;
+    padding: 12px 0;
+    justify-content: center;
+  }
+}

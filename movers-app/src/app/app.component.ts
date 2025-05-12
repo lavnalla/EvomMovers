@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterModule, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { ServicesComponent } from './components/services/services.component';
@@ -11,7 +11,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { QuoteFormComponent } from './components/quote-form/quote-form.component';
 
 
 
@@ -19,8 +19,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeaderComponent, HeroComponent, TestimonialsComponent, FooterComponent, ReactiveFormsModule,     CommonModule,
-    MatCardModule,      // Angular Material Card module
+  imports: [RouterModule,RouterOutlet, RouterLinkActive, HeaderComponent, MatCardModule,      // Angular Material Card module
     MatToolbarModule,   // Angular Material Toolbar module
     MatButtonModule,    // Angular Material Button module
   ], // Import components here

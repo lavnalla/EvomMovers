@@ -1,0 +1,9 @@
+<section class="section contact">
+  <h2 style="text-align:center; margin-bottom: 20px;">Contact Us</h2>
+  <form (ngSubmit)="submitForm()" #contactForm="ngForm" style="max-width: 600px; margin: auto; display: grid; gap: 20px;">
+    <input type="text" name="name" ngModel required placeholder="Your Name" />
+    <input type="email" name="email" ngModel required placeholder="Your Email" />
+    <textarea name="message" ngModel required rows="5" placeholder="Your Message"></textarea>
+    <button type="submit" class="cta-button">Send Message</button>
+  </form>
+</section>

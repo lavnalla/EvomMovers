@@ -1,36 +1,49 @@
-/* Include a Material theme (e.g., Indigo/Pink) */
-@import '@angular/material/prebuilt-themes/indigo-pink.css';
-
-/* Optionally, if you want to customize your theme, you can add your own styles here */
-.mat-toolbar.custom-purple-toolbar {
-  background-color: #140143 !important; /* Deep purple */
-  color: white !important;
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  background: #f8f8f8;
+  color: #333;
 }
-
-.custom-purple-toolbar {
-  background-color: #1c0563 !important;
+.section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.footer {
+  background-color: #1a1a1a;
   color: white;
-  padding: 0; /* optional: remove extra space */
-}
-
-.nav-buttons {
+  padding: 40px 20px;
   display: flex;
-  width: 100%;              /* Make nav-buttons fill the toolbar */
-  color: white;          /* Text color for buttons */
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-
-.nav-buttons button {
-  flex: 1;                  /* Each button takes equal space */
-  color: white !important;
-  border-right: 1px solid rgba(255, 255, 255, 0.2); /* optional separator */
-  border-radius: 0;         /* remove button rounding */
-  justify-content: center; /* center text inside buttons */
+.footer-column {
+  flex: 1;
+  min-width: 250px;
+  margin: 20px 0;
 }
-
-.mat-button {
-  color: white !important;  /* Force white color on all buttons */
+.footer-column h4 {
+  margin-bottom: 15px;
 }
-
-.mat-button-wrapper {
-  color: white !important;  /* Make sure the text in buttons is white */
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+.footer-column ul li a {
+  color: white;
+  text-decoration: none;
 }

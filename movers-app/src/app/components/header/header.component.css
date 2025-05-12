@@ -1,44 +1,87 @@
-/* Ad banner */
-.ad-banner {
-  background-color: #d32f2f; /* Bright Red */
-  color: white;
-  text-align: center;
-  padding: 10px;
-  font-weight: bold;
-  font-size: 16px;
+.header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
-
-/* Toolbar/Header */
-.custom-header {
-  background-color: #6ea1ee; /* Deep Blue */
-  color: white;
+.topbar {
+  background-color: #f2f2f2;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  padding: 5px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
 }
-
-.logo {
-  font-size: 22px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  color: white;
-}
-
-/* Navigation buttons */
-.nav-buttons {
-  display: flex;
-  width: 100%;
-}
-
-.nav-buttons button {
+.topbar-left,
+.topbar-center,
+.topbar-right {
   flex: 1;
-  color: white !important;
-  border-right: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 0;
+  display: flex;
+  align-items: center;
+}
+.topbar-left {
+  justify-content: flex-start;
+}
+.topbar-center {
   justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+}
+.topbar-right {
+  justify-content: flex-end;
+}
+.topbar a {
+  color: #e30613;
+  text-decoration: none;
+}
+.logo img {
+  height: 100px;
+}
+.welcome-text {
+  font-size: 48px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+.call-us {
+  font-size: 16px;
+  font-weight: 600;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px 20px;
+}
+.nav a {
+  margin: 0 15px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+.nav a.active,
+.nav a:hover {
+  color: #e30613;
 }
 
-.nav-buttons button:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+/* Removed invalid HTML and SCSS code */
+
+@media (max-width: 600px) {
+  .topbar {
+    flex-direction: column;
+    padding: 8px 5px;
+    font-size: 12px;
+  }
+  .logo img {
+    height: 50px;
+  }
+  .welcome-text {
+    font-size: 24px;
+    white-space: normal;
+  }
 }

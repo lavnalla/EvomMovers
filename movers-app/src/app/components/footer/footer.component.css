@@ -40,3 +40,15 @@
     }
   }
 }
+
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  .contact-info, .social-media {
+    width: 100%;
+    justify-content: center;
+  }
+}

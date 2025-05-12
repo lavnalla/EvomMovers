@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import emailjs from 'emailjs-com';
 
+
 @Component({
   selector: 'app-quote-form',
   standalone: true,
@@ -19,7 +20,10 @@ export class QuoteFormComponent {
     contactNo: '',
     email: '',
     movingDate: '',
-    typeOfMove: ''
+    typeOfMove: '',
+    bedrooms: '',
+    bathrooms: '',
+    squareFootage: ''
   };
 
   moveTypes = ['Residential', 'Commercial', 'Long Distance', 'Local']; // ✅ Add this
@@ -31,6 +35,9 @@ export class QuoteFormComponent {
       full_name: this.formData.fullName,
       from_address: this.formData.fromAddress,
       to_address: this.formData.toAddress,
+      bedrooms: this.formData.bedrooms,
+      bathrooms: this.formData.bathrooms,
+      squareFootage: this.formData.squareFootage,
       contact_no: this.formData.contactNo,
       email: this.formData.email,
       moving_date: this.formData.movingDate,
@@ -45,12 +52,10 @@ export class QuoteFormComponent {
     ).then((response) => {
       console.log('SUCCESS!', response.status, response.text);
       alert('Quote request sent successfully!');
-      this.dialogRef.close(); // Close the dialog after successful submission
+      this.dialogRef.close();
     }).catch((error) => {
       console.error('FAILED...', error);
       alert('Failed to send quote request. Please try again later.');
     });
-
-    alert('Quote request finished!');
   }
 }

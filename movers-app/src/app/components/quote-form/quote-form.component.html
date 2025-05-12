@@ -1,7 +1,9 @@
 <div class="quote-form">
   <h2 class="form-title">Book Now!</h2>
+  <button type="button" class="close-btn" (click)="dialogRef.close()" style="position:absolute;top:10px;right:10px;background:none;border:none;font-size:1.5rem;cursor:pointer;z-index:10;">&times;</button>
 
   <form (ngSubmit)="onSubmit()" #quoteForm="ngForm">
+    <!-- From and To Address -->
     <div class="form-row">
       <input
         type="text"
@@ -19,14 +21,52 @@
       />
     </div>
 
-    <input
-      type="text"
-      name="fullName"
-      placeholder="Full Name"
-      [(ngModel)]="formData.fullName"
-      required
-    />
+      <!-- Bedrooms, Bathrooms -->
+      <div class="form-row">
+        <input
+          type="number"
+          name="bedrooms"
+          placeholder="Number of Bedrooms"
+          [(ngModel)]="formData.bedrooms"
+          min="0"
+          required
+        />
+        <input
+          type="number"
+          name="bathrooms"
+          placeholder="Number of Bathrooms"
+          [(ngModel)]="formData.bathrooms"
+          min="0"
+          required
+        />
+      </div>
 
+      <!-- Square Footage (single field but in form-row for consistency) -->
+      <div class="form-row">
+        <input
+          type="number"
+          name="squareFootage"
+          placeholder="Total Square Footage"
+          [(ngModel)]="formData.squareFootage"
+          min="0"
+          required
+          style="width: 100%"
+        />
+      </div>
+
+    <!-- Full Name -->
+    <div class="form-row">
+      <input
+        type="text"
+        name="fullName"
+        placeholder="Full Name"
+        [(ngModel)]="formData.fullName"
+        required
+        style="width: 100%"
+      />
+    </div>
+
+    <!-- Contact and Email -->
     <div class="form-row">
       <input
         type="tel"
@@ -44,6 +84,7 @@
       />
     </div>
 
+    <!-- Moving Date and Type -->
     <div class="form-row">
       <input
         type="date"
@@ -63,6 +104,9 @@
       </select>
     </div>
 
+
+
+    <!-- Submit -->
     <button type="submit" [disabled]="!quoteForm.valid">
       Get A Quote
     </button>

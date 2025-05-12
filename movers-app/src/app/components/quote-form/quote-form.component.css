@@ -1,39 +1,48 @@
 .quote-form {
-  background: #ffffff;
+  background: #1565c0;
   padding: 2rem;
   border-radius: 12px;
-  max-width: 600px;
+  width: 100%;  /* Allow the form to take full width of the dialog */
+  max-width: none; /* Remove max-width limit, so the form can take the full width */
   margin: 0 auto;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  color: red;
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
 
 .form-title {
   text-align: center;
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
-  color: #333;
+  color: red;
 }
 
 form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  width: 100%;  /* Ensure the form takes full width */
 }
 
 .form-row {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%; /* Ensure form row takes full width */
 }
 
-input,
-select {
-  flex: 1 1 48%;
+.form-row input,
+.form-row select {
+  flex: 1; /* Allow inputs to grow and fill available space */
+  min-width: 200px;
   padding: 0.75rem;
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 8px;
   transition: border-color 0.3s ease;
+  color: red;
+  box-sizing: border-box; /* Ensure padding doesn't affect width calculation */
 }
 
 input:focus,
@@ -45,12 +54,14 @@ select:focus {
 button {
   padding: 0.9rem 1.5rem;
   background-color: #007bff;
-  color: white;
+  color: red;
   border: none;
   border-radius: 8px;
   font-size: 1.1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  width: 100%; /* Button takes the full width of the form */
+  box-sizing: border-box;
 }
 
 button[disabled] {

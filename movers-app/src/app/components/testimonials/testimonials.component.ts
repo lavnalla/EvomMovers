@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { MatCardModule } from '@angular/material/card';  // Import MatCardModule for mat-card
+import { MatCardModule } from '@angular/material/card'; // Import MatCardModule for mat-card
+import { CommonModule } from '@angular/common'; // This is needed for ngFor
 
 @Component({
   selector: 'app-testimonials',
   standalone: true,
-  imports: [MatCardModule],  // Ensure CommonModule and MatCardModule are imported
+  imports: [CommonModule, MatCardModule],  // Ensure both CommonModule and MatCardModule are imported
   templateUrl: './testimonials.component.html',
   styleUrls: ['./testimonials.component.css']
 })

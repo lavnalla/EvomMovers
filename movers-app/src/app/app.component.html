@@ -1,4 +1,15 @@
+<!-- Fixed Header -->
 <app-header></app-header>
-<app-hero></app-hero>
-<app-testimonials></app-testimonials>
-<app-footer></app-footer>
+
+<!-- Navigation Links Below the Header -->
+<nav class="nav">
+  <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+  <a routerLink="/services" routerLinkActive="active">Services</a>
+  <a routerLink="/quote" routerLinkActive="active">Get a Quote</a>
+  <a routerLink="/testimonials" routerLinkActive="active">Testimonials</a>
+  <a routerLink="/contact" routerLinkActive="active">Contact</a>
+</nav>
+
+<!-- Routed Content (Hero or other components) -->
+<router-outlet></router-outlet>
+
